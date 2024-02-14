@@ -1,0 +1,18 @@
+.inset-0 {
+    background-image: url('../assets/ml.jpg');
+    background-size: cover;
+    background-position: center;  
+    
+}
+
+/* .hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: inherit;
+    
+    z-index: -1;
+} */

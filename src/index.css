@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bg-gray-950{
+    background-image: url('./assets/college.jpg');
+    background-size: cover ;
+    background-position: center;   
+    filter: blur(10px);
+    /* background-color: rgba(0,0,0, .5); */
+}
+
+.text-9xl{
+    color: #73777B;
+}
+
+
+
+
