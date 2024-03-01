@@ -5,7 +5,6 @@ import axios from "axios";
 import Snackbar from '@mui/material/Snackbar';
 import Alert from '@mui/material/Alert';
 import { useNavigate } from "react-router-dom";
-import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
 
@@ -23,8 +22,20 @@ const Portal = () => {
 
   // Function to handle navigation back to detection page
   const handleBackToDetection = () => {
-    history('/attendance'); // Navigate to detection page
+    history('/table'); // Navigate to detection page
   };
+
+  const backtoSignUp = () => {
+    history('/signup')
+  }
+
+  const backtoOGTable = () => {
+    history('/table2')
+  }
+
+  const backtoNewTable = () => {
+    history('/table3')
+  }
 
   useEffect(() => {
     fetch("http://localhost:3001")
@@ -117,7 +128,7 @@ const Portal = () => {
 
   return (
     <>
-      <Navbar />
+      
       <div className="relative" ref={comp}>
         {/* // style={{ height: '61vh' }} */}
         <div
@@ -147,13 +158,15 @@ const Portal = () => {
             {/* style={{ height: '60vh' }} */}
 
           </div>
-          <div className="hero min-h-screen" >
-            <div className="hero-overlay bg-opacity-60"></div>
+          <div className="hero min-h-screen" style={{ backgroundImage: 'url(../assets/college.jpg)' }}>
+            <div className="hero-overlay "></div>
             <div className="hero-content text-center text-neutral-content">
               <div className=" text-white max-w-md">
                 <h1  className=" mb-5 text-5xl font-spaceGrotesk">Hello there</h1>
                 <p className="mb-5">Welcome to the Attendance Portal. If you're a new user,<br/>Sign in to get started!</p>
-                <button className="font-black text-white btn btn-wide mt-5 transition-all duration-300 hover:text-d_orange hover:border-d_orange">Sign In</button>
+                <button onClick={backtoSignUp} className="font-black text-white btn btn-wide mt-5 transition-all duration-300 hover:text-d_orange hover:border-d_orange">
+                  Sign Up
+                  </button>
               </div>
             </div>
           </div>
@@ -218,12 +231,19 @@ const Portal = () => {
           </Alert>
         </Snackbar> */}
         <div>
-          <button className=" btn btn-block" onClick={handleBackToDetection}>Attendance Log ➡️</button> {/* Button to navigate back to detection page */}
+        
+          <button  className=" btn btn-block" onClick={handleBackToDetection} >Table 1 ➡️</button>
+          <button  className=" btn btn-block" onClick={backtoOGTable} >Table 2➡️</button>
+          <button  className=" btn btn-block" onClick={backtoNewTable} >Table 3➡️</button> 
+           {/* Button to navigate back to detection page */}
+
         </div>
       </div>
       <Footer />
     </>
   );
 };
+
+// 
 
 export default Portal;

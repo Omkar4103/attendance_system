@@ -43,7 +43,7 @@ const Contact = () => {
 
   return (
     <>
-      <Navbar />
+      
       <div className="relative" ref={comp}>
         <div
           id="intro-slider"

@@ -43,7 +43,7 @@ const About = () => {
 
     return (
         <>
-            <Navbar />
+
             <div className="relative" ref={comp}>
                 <div
                     id="intro-slider"
@@ -71,7 +71,11 @@ const About = () => {
                         className="absolute inset-0">
                         {/* style={{ height: '60vh' }} */}
                     </div>
-                    <div className="hero min-h-screen max-w-6xl">
+                    <div className="hero min-h-screen" style={{
+                        backgroundImage: 'url(../assets/ml.jpg)',
+                        backgroundSize: 'cover',
+                        backgroundPosition: 'center'
+                    }}>
                         <div className="hero-overlay "></div>
                         <div className="hero-content text-center text-neutral-content">
                             <div className="text-white glass rounded-lg max-w-2xl pl-5 pr-5 ">
